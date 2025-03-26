@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //FOR
+        // for (let index = 0; index < 10; index++) {
+        //     console.log(index)
+        // }
+        // let array = ['apel', 'jeruk', 'mangga'];
+        // for (let i = 0; i < array.length; i++) {
+        //     console.log('Buah ke-' + i + ":" + array[i]);
+        // }
+        // WHILE
+        // let input;
+        // while (input !== "exit") {
+        //     input = prompt("Masukkan sesuatu (ketik exit untuk keluar)");
+        //     console.log("Anda mengetik :" + input);
+        // }
+
+        // let n = parseInt(5);
+        // let faktorial = 1;
+        // let jml = 0;
+        // for (let ind = 1; ind <= n; ind++) {
+        //     faktorial = faktorial * ind;
+        //     jml = jml + ind;
+        // }
+        // document.write(faktorial+"<br>");
+        // document.write(jml);
+
+        let saldo = 100000; // faktorial
+        let bunga = 0.1; // i
+        let waktu = parseInt(3); // n
+        // let jmlh = 0;
+        for (let i = 1; i <= waktu; i++) {
+            saldo = saldo + (saldo*bunga);
+            // jmlh = jmlh + saldo;
+        }
+        document.write(saldo +"<br>");
+        document.write(jmlh);
+    </script>
+</body>
+</html>

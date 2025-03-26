@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Kasus IF-ELSE 2</title>
+</head>
+<body>
+    <script>
+        function hitungtotal() {
+            var nama = document.getElementById("inama").value;
+            var tujuan = document.getElementById("itujuan").value;
+            var kelas = document.getElementById("ikelas").value;
+            var jumlahtiket = parseFloat(document.getElementById("ijumlah").value) || 0;
+            var ht = 0.0;
+            var sub = 0.0;
+            var diskon = 0.0;
+            var total = 0.0;
+            // if ((tujuan == "Jakarta") && (kelas == "Eksekutif")) {
+            //     ht = 70000;
+            // } else if ((tujuan == "Jakarta") && (kelas == "Bisnis")) {
+            //     ht = 40000;
+            // } else if ((tujuan == "Jakarta") && (kelas == "Ekonomi")) {
+            //     ht = 10000;
+            // } else if ((tujuan == "Solo") && (kelas == "Eksekutif")) {
+            //     ht = 80000;
+            // } else if ((tujuan == "Solo") && (kelas == "Bisnis")) {
+            //     ht = 50000;
+            // } else if ((tujuan == "Solo") && (kelas == "Ekonomi")) {
+            //     ht = 20000;
+            // } else if ((tujuan == "Surabaya") && (kelas == "Eksekutif")) {
+            //     ht = 90000;
+            // } else if ((tujuan == "Surabaya") && (kelas == "Bisnis")) {
+            //     ht = 60000;
+            // } else if ((tujuan == "Surabaya") && (kelas == "Ekonomi")) {
+            //     ht = 30000;
+            // }
+            // else {  
+            //     ht = 0;
+            // }
+
+            switch (tujuan) {
+                case "Jakarta": 
+                switch (kelas) {
+                    case "Eksekutif": ht = 70000; break;
+                    case "Bisnis": ht = 40000; break;
+                    case "Ekonomi": ht = 10000; break;
+                    default: ht = 0; break;
+                }
+                break;
+                case "Solo": 
+                switch (kelas) {
+                    case "Eksekutif": ht = 80000; break;
+                    case "Bisnis": ht = 50000; break;
+                    case "Ekonomi": ht = 20000; break;
+                    default : ht = 0; break;
+                }
+                break;
+                case "Surabaya": 
+                switch (kelas) {
+                    case "Eksekutif": ht = 90000; break;
+                    case "Bisnis": ht = 60000; break;
+                    case "Ekonomi": ht = 30000; break;
+                    default : ht = 0; break;
+                }
+                break;
+            }
+
+            sub = jumlahtiket * ht;
+
+            if (document.getElementById("imember").checked==true) {
+                diskon = 0.10*sub;
+            } else {
+                diskon = 0.0;
+            }
+
+            total = sub-diskon
+            
+            document.getElementById("otiket").value= ht;
+            document.getElementById("osub").value= sub;
+            document.getElementById("odiskon").value= diskon;
+            document.getElementById("ototal").value= total;
+            // gunakan untuk mengecek !!! alert (total);
+        }
+    </script>
+    <form name="name" id="name">
+        <table border="1" align="1" width="70%">
+            <tr>
+                <td width="100%" colspan="2"><h2 align="center">Travel Bintang Abadi</h2></td>
+            </tr>
+            <tr>
+                <td width="50%"><pre>
+                    Nama Lengkap :<input type="text" size="20" name="inama" id="inama">
+                    Tujuan       :<select name="itujuan" id="itujuan" size="1">
+                                     <option value="Jakarta">Jakarta</option>
+                                     <option value="Solo">Solo</option>
+                                     <option value="Surabaya">Surabaya</option>
+                                  </select>
+                    Kelas        :<select name="ikelas" id="ikelas" size="1">
+                                     <option value="Eksekutif">Eksekutif</option>
+                                     <option value="Bisnis">Bisnis</option>
+                                     <option value="Ekonomi">Ekonomi</option>
+                                  </select>
+                    Jumlah Tiket :<input type="text" size="11" name="ijumlah" id="ijumlah">
+                    Member       :<input type="checkbox" name="imember" id="imember">Ya</pre></td>
+                        <td width="50%"><pre>
+                    Harga Tiket  :<input type="text" size="10" name="otiket" id="otiket" readonly>
+                    Sub Total    :<input type="text" size="10" name="osub" id="osub" readonly>
+                    Diskon       :<input type="text" size="10" name="odiskon" id="odiskon" readonly>
+                    Total Bayar  :<input type="text" size="10" name="ototal" id="ototal" readonly></pre></td>
+            </tr>
+            <tr>
+                <td width="100%" colspan="2">
+                    <center>
+                        <input type="button" value="Hitung" onclick="hitungtotal()">
+                        <input type="reset" value="Ulang">
+                    </center></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

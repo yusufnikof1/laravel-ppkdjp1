@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator JS</title>
+</head>
+<body>
+    <p>
+        <script>
+            function jumlah() {
+                var bil1 = parseFloat(document.fform.bilangan1.value);
+                if (isNaN (bil1))
+                    bil1= 0.0;
+                var bil2 = parseFloat(document.fform.bilangan2.value);
+                if(isNaN (bil2))
+                    bil2 = 0.0;
+                var hasil = bil1 + bil2;
+                alert("Hasil Penjumlahan = " + hasil);
+            }
+            function kurang() {
+                var bil1 = parseFloat(document.fform.bilangan1.value);
+                if (isNaN (bil1))
+                    bil1 = 0.0;
+                var bil2 = parseFloat(document.fform.bilangan2.value);
+                if (isNaN (bil2))
+                    bil2 = 0.0;
+                var hasil = bil1 - bil2;
+                alert("Hasil Pengurangan = " + hasil);
+            }
+
+            function kali() {
+                var bil1 = parseFloat(document.fform.bilangan1.value);
+                if (isNaN (bil1))
+                    bil1 = 0.0;
+                var bil2 = parseFloat(document.fform.bilangan2.value);
+                if (isNaN (bil2))
+                    bil2 = 0.0;
+                var hasil = bil1 * bil2;
+                alert("Hasil Perkalian = " + hasil);
+            }
+
+            function bagi() {
+                var bil1 = parseFloat(document.fform.bilangan1.value);
+                if (isNaN (bil1))
+                    bil1 = 0.0;
+                var bil2 = parseFloat(document.fform.bilangan2.value);
+                if (isNaN (bil2))
+                    bil2 = 0.0;
+                var hasil = bil1 / bil2;
+                alert("Hasil Pembagian = " + hasil);
+            }
+        </script>
+    </p>
+    <form name="fform">
+        <h1><br>Memasukkan Data Lewat Keyboard</h1>
+        <pre>
+            Bilangan 1 : <input type="text" size="11" name="bilangan1">
+            Bilangan 2 : <input type="text" size="11" name="bilangan2">
+        </pre>
+        <p>
+            <input type="button" value="Jumlahkan" onclick="jumlah()">
+            <input type="button" value="Kurangkan" onclick="kurang()">
+            <input type="button" value="Kalikan" onclick="kali()">
+            <input type="button" value="Bagikan" onclick="bagi()">
+            <input type="reset" value="Ulang">
+        </p>
+    </form>
+</body>
+</html>

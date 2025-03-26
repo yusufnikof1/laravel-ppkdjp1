@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 400px;
+}
+
+h2 {
+    font-size: 85px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.scroll-button {
+    background-color: #F8931F;
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}

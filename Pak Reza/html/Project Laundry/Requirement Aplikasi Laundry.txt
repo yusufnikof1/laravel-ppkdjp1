@@ -1,0 +1,15 @@
+1. Timbang berapa kg (baju, dan pakaian lainnya)
+2. Paket 1 - 4000
+3. Paket Gosok - 3000
+4. Paket Gosok + cuci 5000
+
+Member:
+- Nama
+- No. HP
+- Alamat
+
+
+Transaksi
+- Timbang -> Keluar Harga -> Nama Customer -> Bayar didepan atau dibelakang
+- Nota print dibawa pulang
+- Nota print dibawa pada saat pengambilan

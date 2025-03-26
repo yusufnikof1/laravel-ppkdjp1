@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Bagian Header */
+.judul {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+}
+
+.judul h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.simbolgaris {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.simbolgaris h1 {
+    color: #F8931F;
+    font-size: 35px;
+}
+
+.simboltitiktiga {
+    position: absolute;
+    top: 7%;
+    right: 5%;
+}
+
+.simboltitiktiga h1 {
+    font-size: 60px;
+}
+
+/* Bagian Konten */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content, .content1, .content2 {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Tombol Scroll */
+.scrollbutton {
+    margin-top: 40px;
+}
+
+.scrollbutton a {
+    background-color: #F8931F;
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Bagian Sosial Media */
+.socialicon {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.socialicon a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .judul {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .simbolgaris, .simboltitiktiga {
+        display: none; /* Sembunyikan simbol jika layar terlalu kecil */
+    }
+
+    .content, .content1, .content2 {
+        font-size: 40px;
+    }
+
+    .scrollbutton a {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+
+    .socialicon {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

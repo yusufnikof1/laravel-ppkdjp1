@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.judul h1 {
+    font-family: sans-serif;
+    font-size: 35px;
+    position: absolute;
+    top: 8vh;
+    right: 89vh;
+    letter-spacing: 2px;
+}
+
+.simbolgaris h1 {
+    font-family: sans-serif;
+    color: #F8931F;
+    font-size: 35px;
+    position: absolute;
+    top: 8vh;
+    right: 99.4vh;
+}
+
+.simboltitiktiga h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+    position: absolute;
+    top: 7vh;
+    right: 10vh;
+}
+
+.content {
+    font-family: sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute;
+    top: 28vh
+}
+
+.content1 {
+    font-family: sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute;
+    top: 39vh;
+}
+
+.content2 {
+    font-family: sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute;
+    top: 50vh;
+}
+
+.scrollbutton {
+    position: absolute;
+    top: 68vh;
+}
+
+.scrollbutton a{
+    background-color: #F8931F;
+    font-family: sans-serif;
+    color: black;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.img1 {
+    position: absolute;
+    transform: scale(.1);
+    top: 69.2vh;
+    right: 75vh;
+}
+
+.img2 {
+    position: absolute;
+    transform: scale(.04);
+    top: 2vh;
+    left: -18vh;
+}
+
+.img3 {
+    position: absolute;
+    transform: scale(.04);
+    top: 28.2vh;
+    right: 11vh;
+}
+
+.socialicon a {
+    text-decoration: none;
+}

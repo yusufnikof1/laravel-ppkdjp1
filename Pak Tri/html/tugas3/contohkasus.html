@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Kasus IF-ELSE 2</title>
+</head>
+<body>
+    <script>
+        function hitungtotal() {
+            var nama = document.getElementById("inama").value;
+            var tujuan = document.getElementById("itujuan").value;
+            var jumlahtiket = parseFloat(document.getElementById("ijumlah").value) || 0;
+            var ht = 0.0;
+            var sub = 0.0;
+            var diskon = 0.0;
+            var total = 0.0;
+            if (tujuan=="Jakarta") {
+                ht = 100000;
+            } else if (tujuan=="Cirebon") {
+                ht = 150000;
+            } else {
+                ht = 200000;
+            }
+            sub = jumlahtiket * ht;
+
+            if (document.getElementById("imember").checked==true) {
+                diskon = 0.10*sub;
+            } else {
+                diskon = 0.0;
+            }
+
+            total = sub-diskon
+            
+            document.getElementById("otiket").value= ht;
+            document.getElementById("osub").value= sub;
+            document.getElementById("odiskon").value= diskon;
+            document.getElementById("ototal").value= total;
+            // gunakan untuk mengecek !!! alert (total);
+        }
+    </script>
+    <form name="name" id="name">
+        <table border="1" align="1" width="70%">
+            <tr>
+                <td width="100%" colspan="2"><h2 align="center">Travel Bintang Abadi</h2></td>
+            </tr>
+            <tr>
+                <td width="50%"><pre>
+                    Nama Lengkap :<input type="text" size="20" name="inama" id="inama">
+                    Tujuan       :<select name="itujuan" id="itujuan" size="1">
+                                     <option value="Jakarta">Jakarta</option>
+                                     <option value="Cirebon">Cirebon</option>
+                                     <option value="Tasikmalaya">Tasikmalaya</option>
+                                  </select>
+                    Jumlah Tiket :<input type="text" size="11" name="ijumlah" id="ijumlah">
+                    Member       :<input type="checkbox" name="imember" id="imember">Ya</pre></td>
+                        <td width="50%"><pre>
+                    Harga Tiket  :<input type="text" size="10" name="otiket" id="otiket" readonly>
+                    Sub Total    :<input type="text" size="10" name="osub" id="osub" readonly>
+                    Diskon       :<input type="text" size="10" name="odiskon" id="odiskon" readonly>
+                    Total Bayar  :<input type="text" size="10" name="ototal" id="ototal" readonly></pre></td>
+            </tr>
+            <tr>
+                <td width="100%" colspan="2">
+                    <center>
+                        <input type="button" value="Hitung" onclick="hitungtotal()">
+                        <input type="reset" value="Ulang">
+                    </center></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

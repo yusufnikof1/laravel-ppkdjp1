@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+    <link rel="stylesheet" href="datamahasiswa.css">
+</head>
+<body>
+    <div class="judul">
+        <h1>Data Mahasiswa</h1>
+        <h2>Pusat Pelatihan Kerja Daerah Jakarta Pusat</h2>
+    </div>
+    <script src="datamahasiswa.js"></script>
+    <hr>
+    <br>
+    <form onsubmit="return false">
+        <pre>Nama         : <input type="text" size="20" id="nama" name="nama"></pre>
+        <pre>Jenis Kelamin: <select id = "jk" name="jk" size="1"><option value = "Pria">Pria</option>;  
+            <option value="Wanita">Wanita</option>;
+        </select></pre>
+        <pre>Agama        : <select name="agama" id="agama">
+            <option value="Islam">Islam</option>;
+            <option value="Kristen">Kristen Protestan</option>;
+            <option value="Kristen">Kristen Katolik</option>;
+            <option value="Hindu">Hindu</option>;
+            <option value="Buddha">Buddha</option>;
+        </select></pre>
+        <pre>Status       : <input type="radio" value="Lajang" name="status" id="lajang">Lajang <input type="radio" value="Menikah" name="status" id="menikah">Menikah</pre>
+        <pre>Jurusan      : <select name="jurusan" id="jurusan">
+            <option value="Web Programming">Web Programming</option>;
+            <option value="Mobile Programming">Mobile Programming</option>;
+            <option value="Desain Grafis">Desain Grafis</option>;
+        </select></pre>
+        <pre>Komentar     : <textarea name="komentar" id="komentar"cols="130" rows="4"></textarea><br><br></pre>
+        <div class="button">
+            <input type="button" value="Kirim" onclick="kirim()"><input type="reset" value="Ulang">
+        </div>
+    </form>
+
+    <h3>Output</h3>
+
+    <pre>Nama         : <input type="text" size="20" name="r_nama" id="r_nama"></pre>
+        <pre>Jenis Kelamin: <select name="r_jk" id="r_jk" size="1"><option value = "Laki-Laki">Pria</option>;
+            <option value="Wanita">Wanita</option>;
+        </select></pre>
+        <pre>Agama        : <select name="r_agama" id="r_agama">
+            <option value="Islam">Islam</option>;
+            <option value="Kristen">Kristen</option>;
+            <option value="Katolik">Katolik</option>;
+            <option value="Hindu">Hindu</option>;
+            <option value="Buddha">Buddha</option>;
+        </select></pre>
+        <pre>Status       : <input type="radio" value="Lajang" name="r_status" id="r_lajang">Lajang <input type="radio" value="Menikah" name="r_status" id="r_menikah">Menikah</pre>
+        <pre>Jurusan      : <select name="r_jurusan" id="r_jurusan">
+            <option value="Web Programming">Web Programming</option>;
+            <option value="Mobile Programming">Mobile Programming</option>;
+            <option value="Desain Grafis">Desain Grafis</option>;
+        </select></pre>
+        <pre>Komentar     : <textarea name="r_komentar" id="r_komentar" cols="130" rows="4"></textarea></pre>
+</body>
+</html>

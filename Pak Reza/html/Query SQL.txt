@@ -1,0 +1,78 @@
+Sumber: https://www.programiz.com/sql/online-compiler
+
+SELECT Customers.first_name, Customers.last_name, Orders.item FROM Customers LEFT JOIN Orders on Orders.customer_id = Customers.customer_id // LEFT JOIN (mementingkan tabel A)
+
+SELECT Customers.first_name, Customers.last_name, Orders.item FROM Customers INNER JOIN Orders on Orders.customer_id = Customers.customer_id // INNER JOIN (melihat relasi A dan B)
+
+SELECT Customers.first_name, Customers.last_name, Orders.item FROM Customers RIGHT JOIN Orders on Orders.customer_id = Customers.customer_id // RIGHT JOIN (mementingkan tabel B)
+
+SELECT Customers.first_name, Customers.last_name, Orders.item FROM Customers FULL OUTER JOIN Orders on Orders.customer_id = Customers.customer_id // FULL OUTER JOIN (menggabungkan A dan B)
+
+//Fungsi IF di query SQL
+
+SELECT 
+Customers.first_name,
+Customers.last_name, 
+Orders.item, 
+Shippings.status,
+Orders.amount,
+
+CASE WHEN Orders.amount < 350
+THEN 'Free'
+WHEN Orders.amount < 450
+THEN 'Discount 10%'
+WHEN Orders.amount is null
+THEN 'Empty'
+ELSE 'Paid' END as Diskon
+
+FROM Customers 
+LEFT JOIN Orders on Orders.customer_id = Customers.customer_id 
+LEFT JOIN Shippings on Shippings.customer = Orders.order_id
+
+// AGREGASI SQL
+//Fungsi SUM di query SQL
+
+SELECT 
+SUM(Orders.amount) as sum_amount,
+Shippings.status
+
+FROM Customers 
+LEFT JOIN Orders on Orders.customer_id = Customers.customer_id 
+LEFT JOIN Shippings on Shippings.customer = Orders.order_id
+GROUP BY Shippings.status
+
+//Fungsi COUNT di query SQL
+SELECT 
+Count(*) as count_data,
+Shippings.status
+
+FROM Customers 
+LEFT JOIN Orders on Orders.customer_id = Customers.customer_id 
+LEFT JOIN Shippings on Shippings.customer = Orders.order_id
+WHERE Orders.item is not null
+GROUP BY Shippings.status
+
+//Fungsi UNION di query SQL
+SELECT 
+Orders.item,
+Orders.amount,
+Shippings.status
+
+FROM Customers 
+LEFT JOIN Orders on Orders.customer_id = Customers.customer_id 
+LEFT JOIN Shippings on Shippings.customer = Orders.order_id
+
+WHERE Orders.item is not null AND Orders.item = 'Keyboard'
+
+UNION
+
+SELECT
+Orders.item,
+Orders.amount,
+Shippings.status
+
+FROM Customers
+LEFT JOIN Orders on Orders.customer_id = Customers.customer_id
+LEFT JOIN Shippings on Shippings.customer = Orders.order_id
+
+WHERE Orders.item is not null AND Orders.amount < 300

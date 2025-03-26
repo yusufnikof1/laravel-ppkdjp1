@@ -1,0 +1,34 @@
+.display-inti .card .card-header p, 
+.display-inti .card .card-body p,
+.display-inti .card .card-footer p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.display-inti .card .card-body p {
+    font-size: 5vw;
+}
+
+.display-inti .card .card-body {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.display-antrian .card .card-body {
+    font-size: 3vw;
+}
+
+.jadwal-sholat .box-jadwal-sholat {
+    background: linear-gradient(164deg, white, green);
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+/* .display-inti .card. .card-footer p {
+    font-weight: bold;
+    font-size: 15px;
+} */

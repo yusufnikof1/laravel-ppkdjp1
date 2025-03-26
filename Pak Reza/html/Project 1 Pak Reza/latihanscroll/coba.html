@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SNAP EFFECT</title>
+    <link rel="stylesheet" href="coba.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+document.addEventListener("wheel", function(event) {
+    event.preventDefault();
+    const container = document.getElementById("container");
+    container.scrollBy({
+        left: event.deltaY * 2,
+        behavior: "smooth"
+    });
+}, { passive: false });
+
+</script>
+
+<body>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Container untuk section yang akan di-scroll secara horizontal -->
+    <div class="container" id="container">
+        <section class="one">
+            <div class="logo" data-aos="zoom-in">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris" data-aos="zoom-in" role="presentation">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga" data-aos="zoom-in" role="presentation">
+                <h1>⋮</h1>
+            </div>
+            <div class="content" data-aos="zoom-in">
+                <h1>LET`S CREATE</h1>
+            </div>
+            <div class="content1" data-aos="zoom-in">
+                <h1>SOMETHING</h1>
+            </div>
+            <div class="content2" data-aos="zoom-in">
+                <h1>GREAT TOGETHER</h1>
+            </div>
+            <div class="scrollbutton" data-aos="zoom-in">
+                <a href="#">Scroll for More</a>
+            </div>
+            <div class="img1" data-aos="zoom-in">
+                <a href="#"><img src="img/LinkedIn.png" alt="LinkedIn"></a>
+            </div>
+            <div class="img2" data-aos="zoom-in">
+                <a href="#"><img src="img/YouTube.png" alt="YouTube"></a>
+            </div>
+            <div class="img3" data-aos="zoom-in">
+                <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+            </div>
+        </section>
+
+        <section class="two">
+            <div class="logo2">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris2">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga2">
+                <h1>⋮</h1>
+            </div>
+            <div class="content_2">
+                <h1>About Us</h1>
+            </div>
+            <div class="content_2p">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam at ullam eveniet temporibus, reprehenderit delectus nemo. Minus inventore ullam aut, est nam, praesentium exercitationem excepturi eius illum iusto quam debitis earum. Soluta officiis quibusdam maiores! Ex beatae animi harum. Autem cupiditate, commodi, enim, vitae iste corrupti voluptates nostrum hic minus dolores molestias esse natus sit similique. Est, eligendi suscipit aspernatur aut quos veniam, pariatur voluptatum amet iure fugiat, perspiciatis dolorum natus eveniet beatae expedita sint?
+                </p>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat vero saepe at atque dolores officia sunt velit, optio nam cum ducimus ab reiciendis ut repudiandae, non consequuntur iusto? Eius repellendus saepe quasi aliquam pariatur sit quos sed, explicabo magni voluptatum, tenetur possimus illo delectus neque nesciunt! Expedita incidunt commodi odit?
+                </p>
+            </div>
+            <div class="imggedung_2">
+                <a href="#"><img src="img/Gedung.png" alt="Gedung"></a>
+            </div>
+            <div class="img1_2">
+                <a href="#"><img src="img/LinkedIn.png" alt=""></a>
+            </div>
+            <div class="img2_2">
+                <a href="#"><img src="img/YouTube.png" alt=""></a>
+            </div>
+            <div class="img3_2">
+                <a href="#"><img src="img/Instagram.png" alt=""></a>
+            </div>
+        </section>
+
+        <section class="three">
+            <div class="logo3">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris3">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga3">
+                <h1>⋮</h1>
+            </div>
+            <div class="content_3">
+                <h1>Philosophy</h1>
+            </div>
+            <div class="content_3p">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus cupiditate rem distinctio ad atque earum magni, expedita voluptas velit in laudantium, quaerat praesentium repellat blanditiis maiores doloribus explicabo voluptate autem ipsum mollitia unde. Eveniet inventore fugiat sit harum voluptate maiores. Nisi quasi enim tenetur accusantium natus error itaque laboriosam nihil dolore, ipsam voluptate. Non, officiis! Quis sed nulla, nisi consectetur vitae odio optio dicta voluptatum repellat quod facere saepe dolore totam ipsam explicabo nesciunt. Fuga.
+                </p>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat alias accusantium similique placeat id aperiam nostrum libero quia. Nesciunt optio sit explicabo quas doloremque totam quidem, praesentium quibusdam, similique recusandae eligendi sed ipsa, omnis cupiditate mollitia eaque! Laudantium, dolores iure!</p>
+            </div>
+            <div class="imgilmuwan_3">
+                <a href=""><img src="img/Filsuf.png" alt=""></a>
+            </div>
+            <div class="img1_3">
+                <a href=""><img src="img/LinkedIn.png" alt=""></a>
+            </div>
+            <div class="img2_3">
+                <a href=""><img src="img/YouTube.png" alt=""></a>
+            </div>
+            <div class="img3_3">
+                <a href=""><img src="img/Instagram.png" alt=""></a>
+            </div>
+        </section>
+
+        <section class="four">
+            <div class="logo4">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris4">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga4">
+                <h1>⋮</h1>
+            </div>
+            <div class="content_4">
+                <h1>CASE</h1>
+            </div>
+            <div class="content_4bwh">
+                <h1>STUDY</h1>
+            </div>
+            <div class="button4">
+                <a href="#">Our Client</a>
+            </div>
+            <div class="imglamp4">
+                <a href="#"><img src="img/Lamp.png" alt=""></a>
+            </div>
+            <div class="img1_4">
+                <a href="#"><img src="img/LinkedIn.png" alt=""></a>
+            </div>
+            <div class="img2_4">
+                <a href="#"><img src="img/YouTube.png" alt=""></a>
+            </div>
+            <div class="img3_4">
+                <a href="#"><img src="img/Instagram.png" alt=""></a>
+            </div>
+        </section>
+
+
+        <section class="five">
+            <div class="logo5">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris5">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga5">
+                <h1>⋮</h1>
+            </div>
+            <div class="content_5">
+                <h1>Clean &</h1>
+            </div>
+            <div class="content_5bwh">
+                <h1>Clear</h1>
+            </div>
+            <div class="content_5p">
+                <p>Lorem ipsum dolor sit amet <br>consectetur, adipisicing elit. <br>Reiciendis, iusto.</p>
+            </div>
+            <div class="imgcontent_5">
+                <a href="#"><img src="img/cleanclear.PNG" alt=""></a>
+            </div>
+            <div class="buttoncontent_5">
+                <a href="">See More</a>
+            </div>
+            <div class="content_5_2">
+                <h1>Honda</h1>
+            </div>
+            <div class="content_5_2bwh">
+                <h1>Prospect</h1>
+            </div>
+            <div class="content_5_2plgbwh">
+                <h1>Motor</h1>
+            </div>
+            <div class="content_5_2p">
+                <p>Lorem ipsum dolor sit amet <br>consectetur, adipisicing elit. <br>Reiciendis, iusto.</p>
+            </div>
+            <div class="imgcontent_5_2">
+                <a href="#"><img src="img/Honda.PNG" alt=""></a>
+            </div>
+            <div class="buttoncontent_5_2">
+                <a href="#">See More</a>
+            </div>
+            <div class="content_5_3">
+                <h1>Johnson's</h1>
+            </div>
+            <div class="content_5_3bwh">
+                <h1>Baby</h1>
+            </div>
+            <div class="content_5_3p">
+                <p>Lorem ipsum dolor sit amet <br>consectetur, adipisicing elit. <br>Reiciendis, iusto.</p>
+            </div>
+            <div class="imgcontent_5_3">
+                <a href="#"><img src="img/Baby.PNG" alt=""></a>
+            </div>
+            <div class="buttoncontent_5_3">
+                <a href="">See More</a>
+            </div>
+            <div class="content_5_4">
+                <h1>JUHO Hard</h1>
+            </div>
+            <div class="content_5_4bwh">
+                <h1>Seltzer</h1>
+            </div>
+            <div class="content_5_4p">
+                <p>Lorem ipsum dolor sit amet <br>consectetur, adipisicing elit. <br>Reiciendis, iusto.</p>
+            </div>
+            <div class="imgcontent_5_4">
+                <a href="#"><img src="img/Juho.PNG" alt=""></a>
+            </div>
+            <div class="buttoncontent_5_4">
+                <a href="">See More</a>
+            </div>
+            <div class="img1_5">
+                <a href="#"><img src="img/LinkedIn.png" alt=""></a>
+            </div>
+            <div class="img2_5">
+                <a href="#"><img src="img/YouTube.png" alt=""></a>
+            </div>
+            <div class="img3_5">
+                <a href="#"><img src="img/Instagram.png" alt=""></a>
+            </div>
+        </section>
+
+        <section class="six">
+            <div class="logo6">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris6">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga6">
+                <h1>⋮</h1>
+            </div>
+            <div class="imgbaby_6">
+                <a href=""><img src="img/Baby.PNG" alt=""></a>
+            </div>
+            <div class="content_6">
+                <h1>Johnson's Baby</h1>
+            </div>
+            <div class="content_6p">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex laboriosam ab, natus similique aperiam. Corrupti quis non error soluta laudantium assumenda veritatis labore odio officia quas voluptatem expedita fugiat aspernatur, quam nisi qui dolorum esse, animi earum libero. Perspiciatis odit nesciunt itaque maxime laboriosam voluptatum, voluptatem assumenda blanditiis optio facere rerum incidunt minus reiciendis earum iusto accusantium enim suscipit quibusdam officiis illo voluptas fugiat dignissimos harum illum. Accusamus voluptas doloribus aut similique corrupti dolore molestiae. Exercitationem tempore vitae quasi impedit totam, assumenda earum veritatis ad? Molestiae architecto nisi dolore!
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis natus suscipit beatae magnam illum, sint nobis ex, nostrum nisi iste iure inventore ad quia optio. Cum officiis saepe voluptate perferendis sint, velit accusamus nihil aperiam fugiat incidunt, ducimus esse nemo eaque illo minima temporibus, laboriosam nisi. Nulla quisquam repellendus accusamus? Sunt possimus velit facere odit cumque neque officia blanditiis doloribus ratione tenetur, assumenda animi aliquam qui, vero distinctio eveniet ut fugit corporis vitae vel illo!</p>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta hic earum, enim inventore quidem culpa, veniam quis ipsa aut id eum repudiandae alias est debitis fuga necessitatibus? Excepturi fugiat dolores laudantium veniam? Possimus voluptates consectetur, dolor vel, amet quas repellendus, eos enim in repellat placeat excepturi at aliquid commodi sed.
+                </p>
+            </div>
+            <div class="img1_6">
+                <a href=""><img src="img/LinkedIn.png" alt=""></a>
+            </div>
+            <div class="img2_6">
+                <a href=""><img src="img/YouTube.png" alt=""></a>
+            </div>
+            <div class="img3_6">
+                <a href=""><img src="img/Instagram.png" alt=""></a>
+            </div>
+
+        </section>
+
+        <section class="seven">
+            <div class="logo7">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris7">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga7">
+                <h1>⋮</h1>
+            </div>
+            <div class="imgtigaorang_7">
+                <a href=""><img src="img/tigaorang.PNG" alt=""></a>
+            </div>
+            <div class="img1_7">
+                <a href=""><img src="img/LinkedIn.png" alt=""></a>
+            </div>
+            <div class="img2_7">
+                <a href=""><img src="img/YouTube.png" alt=""></a>
+            </div>
+            <div class="img3_7">
+                <a href=""><img src="img/Instagram.png" alt=""></a>
+            </div>
+        </section>
+
+        <section class="eight">
+            <div class="logo8">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris8">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga8">
+                <h1>⋮</h1>
+            </div>
+            <div class="imgorang_8">
+                <a href="#"><img src="img/orang1.PNG" alt=""></a>
+            </div>
+            <div class="content_8">
+                <h1>PRITA</h1>
+            </div>
+            <div class="content_8bwh">
+                <h1>WIDYAPUTRI</h1>
+            </div>
+            <div class="content_8p">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, temporibus nisi tempore quisquam, sequi quibusdam debitis provident assumenda quaerat repellendus facere unde soluta saepe qui labore exercitationem totam voluptas error incidunt amet ab aperiam et. Deserunt voluptate, explicabo maxime nam illum alias illo ullam quod veritatis ea accusamus eum nisi! Officia, reiciendis dolore molestias nostrum et facilis quidem eos, provident voluptate maiores dolor corrupti, recusandae iure! Maiores esse obcaecati laboriosam sit aliquam voluptatem accusamus aut?</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores error unde amet, dolore molestiae minus voluptate labore excepturi assumenda repellat voluptatum deserunt accusantium perspiciatis consequatur officia perferendis harum. Impedit quos minus voluptas dolore repudiandae consequatur a, dignissimos eligendi magnam fugiat saepe molestiae sint ducimus similique sunt magni facilis dolor molestias.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt officiis numquam temporibus sed fugit beatae porro, dolores soluta ad sint officia possimus iure enim? Molestias repellat doloremque distinctio maxime tempore, id quibusdam dolorum ratione facilis, natus numquam fugit. Laudantium, quisquam.</p>
+            </div>
+            <div class="img1_8">
+                <a href=""><img src="img/LinkedIn.png" alt=""></a>
+            </div>
+            <div class="img2_8">
+                <a href=""><img src="img/YouTube.png" alt=""></a>
+            </div>
+            <div class="img3_8">
+                <a href=""><img src="img/Instagram.png" alt=""></a>
+            </div>
+        </section>
+
+        <section class="nine">
+            <div class="logo9">
+                <h2>Bailey Capel</h2>
+            </div>
+            <div class="simbolgaris9">
+                <h1>│</h1>
+            </div>
+            <div class="simboltitiktiga9">
+                <h1>⋮</h1>
+            </div>
+            <div class="imgmaps_9">
+                <a href=""><img src="img/maps.png" alt=""></a>
+            </div>
+            <div class="contentadress_9">
+                <h2>OUR ADRESS</h2>
+            </div>
+            <div class="contentadressp_9">
+                <p>Bailey Capel</p>
+                <br>
+                <p>Jl. Bangka Raya No. 101 Mampang</p>
+                <br>
+                <p>Jakarta Selatan</p>
+            </div>
+            <div class="contentcontact_9">
+                <h2>OUR CONTACT</h2>
+            </div>
+            <div class="contentcontactp_9">
+                <p>+6221 31245678</p>
+                <br>
+                <p>hello@baileycapel.com</p>
+            </div>
+
+        </section>
+
+    </div>
+</body>
+</html>

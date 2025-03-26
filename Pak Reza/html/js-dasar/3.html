@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <div id="umur"></div>
+    <script>
+        let nama = "yusuf";
+        let age = 5;
+        // Jika yusuf umurnya dibawah 5 tahum, maka yusuf disebut balita
+        // selain itu anak-anak
+
+        if(age = 5) {
+            document.querySelector("#umur").innerHTML = "Kanak-Kanak";
+            // document.getElementById("umur").innerHTML = "Kana k-Kanak";
+            console.log("Kanak-Kanak");
+        }
+        else if (age < 5) {
+            document.querySelector("#umur").innerHTML = "Balita";
+            // document.getElementById("umur").innerHTML = "Balita";
+            console.log("Balita");
+        }
+        else {
+            document.querySelector("#umur").innerHTML = "Tidak tahu";
+            // document.getElementById("umur").innerHTML = "Tidak tahu";
+            console.log("Tidak tahu");
+        }
+
+        // if(nama) {
+        //     // document.getElementById("app");
+        //     document.querySelector('#app').innerHTML = "Iya ada";
+        //     // document.write("iya benar");
+        //     console.log("iya benar");
+        // } else {
+        //     console.log("tidak ada nilai");
+        //     document.getElementById("app");
+        //     document.querySelector("#app")
+        // }
+    </script>
+</body>
+</html>

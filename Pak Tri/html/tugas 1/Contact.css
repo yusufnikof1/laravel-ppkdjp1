@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #F9F7F7;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3F72AF;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    border-right: 1px solid white;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #DBE2EF;
+}
+
+.kontak h1 {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.email h2 {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.formemail {
+    margin-left: 50px;
+}
+
+.pesan h2 {
+    margin-left: 50px;
+}
+
+.formpesan {
+    margin-left: 50px;
+}
+
+.formpesan textarea {
+    width: 1000px;
+    height: 150px;
+}
+
+button {
+    width: 75px;
+    position: relative;
+    padding: 10px;
+    background-color: #3F72AF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #112D4E;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-size: small;
+}
