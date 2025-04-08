@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BelajarController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,3 +25,4 @@ Route::post('action-login', [LoginController::class, 'actionLogin']);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('categories', CategoriesController::class);
 Route::resource('users', UsersController::class);
+Route::resource('product', ProductController::class);
