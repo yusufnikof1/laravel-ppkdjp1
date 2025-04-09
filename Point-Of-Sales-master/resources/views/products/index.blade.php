@@ -11,7 +11,7 @@
                         <h5 class="card-title">{{ $title ?? '' }}</h5>
                         <div class="mt-4 mb-3">
                             <div align="right" class="mb-3">
-                                <a class="btn btn-primary" href="{{ route('product.create') }}">Add Categories</a>
+                                <a class="btn btn-primary" href="{{ route('product.create') }}">Add Products</a>
                             </div>
                             <table class="table table-bordered">
                                 <thead>
