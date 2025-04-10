@@ -100,6 +100,17 @@
         // category.addEventListener(function() {
 
         // });
+
+        function formatRupiah(number) {
+
+            const formatted = number.toLocaleString("id", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+            });
+
+            return formatted;
+        }
+
         $('#category_id').change(function() {
             let cat_id = $(this).val(),
                 option = `<option value="">Select One</option>`;
@@ -110,7 +121,7 @@
                 success: function(resp) {
                     $.each(resp.data, function(index, value) {
                         option +=
-                            `<option value="${value.id}" data-price="${value.product_price}" data-img="${value.product_photo}"">${value.product_name}</option>`;
+                            `<option value="${value.id}" data-price="${value.product_price}" data-img="${value.product_photo}">${value.product_name}</option>`;
                     });
                     $('#product_id').html(option);
                 }
@@ -121,8 +132,9 @@
             let tbody = $('tbody');
             let selectedOption = $('#product_id').find('option:selected');
             let namaProduk = selectedOption.text()
+            let productId = selectedOption.val()
             let PhotoProduct = selectedOption.data('img');
-            let productPrice = selectedOption.data('price');
+            let productPrice = parseInt(selectedOption.data('price')) || 0;
             if ($('#category_id').val() == "") {
                 alert('Category required');
                 return false;
@@ -133,16 +145,45 @@
             }
 
             let newRow = "<tr>";
-            newRow += `<td><img src="" alt="Ini gambar"></td>`
-            newRow += `<td>${namaProduk}</td>`
-            newRow += `<td><input type='number' name='qty[]'></td>`
-            newRow += `<td>${productPrice}</</td>`
+            newRow += `<td><img width="100px" src="{{ asset('storage/') }}/${PhotoProduct}" alt="Ini gambar"></td>`
+            newRow += `<td>${namaProduk}<input type='hidden' name='product_id[]' value='${productId}'></td>`
+            newRow += `<td width='110px'><input value='1' type='number' name='qty[]' class='qty form-control'></td>`
+            newRow +=
+                `<td><input type='hidden' name='order_price[]' value='${productPrice}'><span class='price' data-price= ${productPrice}>Rp. ${formatRupiah(productPrice)}</span></td>`
+            newRow +=
+                `<td><input type='hidden' class='subtotal_input' name='order_subtotal[]' value='${productPrice}'><span class='subtotal'>${formatRupiah(productPrice)}</span></td>`
             newRow += `</tr>`
 
             tbody.append(newRow);
 
+            calculateSubTotal();
+
             clearAll();
+
+            $('.qty').off().on('input', function() {
+                let row = $(this).closest('tr');
+                let qty = parseInt($(this).val()) || 0;
+                let price = parseInt(row.find('.price').data('price')) || 0;
+                let total = qty * price;
+                row.find('.subtotal').text(formatRupiah(total));
+                row.find('.subtotal_input').text(formatRupiah(total));
+
+                calculateSubTotal();
+            })
         });
+
+        function calculateSubTotal() {
+            let grandtotal = 0;
+            $('.subtotal').each(function() {
+                let total = parseInt($(this).text().replace(/\./g, ''));
+                grandtotal += total;
+                // console.log("total", total);
+            });
+
+            // console.log(grandtotal);
+            $('.grandtotal').text(formatRupiah(grandtotal));
+            $('input[name="grandtotal"]') val(grandtotal);
+        }
 
         function clearAll() {
             $('#category_id').val("");
