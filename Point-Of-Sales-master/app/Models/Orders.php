@@ -10,7 +10,12 @@ class Orders extends Model
         'order_code',
         'order_date',
         'order_amount',
+        'order_change',
         'order_status',
-        'order_change'
     ];
+
+    public function orderDetails()
+    {
+        return $this->hasMany(orderDetails::class, 'order_id', 'id');
+    }
 }

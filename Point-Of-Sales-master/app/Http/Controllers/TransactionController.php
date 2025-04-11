@@ -20,7 +20,7 @@ class TransactionController extends Controller
         $title = "Orders";
         // select * from product left join categories on categories.id = products.category_id
         //ORM : Object Relation Mapping
-        $datas = Products::orderBy('id', 'desc')->get();
+        $datas = Orders::orderBy('id', 'desc')->get();
         return view('pos.index', compact('title', 'datas'));
     }
 
@@ -52,9 +52,10 @@ class TransactionController extends Controller
         ];
 
         $order = Orders::create($data);
-
+        // return $order;
         $qty = $request->qty;
         foreach ($qty as $key => $data) {
+            // return $request;
             orderDetails::create([
                 'order_id' => $order->id,
                 'product_id' => $request->product_id[$key],
@@ -64,8 +65,8 @@ class TransactionController extends Controller
             ]);
         }
 
-        Alert::toast('Data Added Succesfully', 'Success');
-        return redirect()->to('product');
+        Alert::toast('Data Added Successfully', 'success');
+        return redirect()->to('pos');
     }
 
     /**
@@ -73,7 +74,11 @@ class TransactionController extends Controller
      */
     public function show(string $id)
     {
-        //
+        //order
+        $order = Orders::findorFail($id);
+        $orderDetails = orderDetails::with('product')->where('order_id', $id)->get();
+        $title = "Order Details of " . $order->order_code;
+        return view('pos.show', compact('order', 'orderDetails', 'title'));
     }
 
     /**
@@ -131,5 +136,12 @@ class TransactionController extends Controller
         $products = Products::where('category_id', $category_id)->get();
         $response = ['status' => 'success', 'message' => 'Fetch product success', 'data' => $products];
         return response()->json($response, 200);
+    }
+
+    public function print($id)
+    {
+        $order = Orders::findorFail($id);
+        $orderDetails = orderDetails::with('product')->where('order_id', $id)->get();
+        return view('pos.print-struk', compact('order', 'orderDetails'));
     }
 }

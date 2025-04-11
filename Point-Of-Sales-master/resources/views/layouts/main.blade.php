@@ -182,7 +182,7 @@
 
             // console.log(grandtotal);
             $('.grandtotal').text(formatRupiah(grandtotal));
-            $('input[name="grandtotal"]') val(grandtotal);
+            $('input[name="grandtotal"]').val(grandtotal);
         }
 
         function clearAll() {

@@ -29,3 +29,4 @@ Route::resource('users', UsersController::class);
 Route::resource('product', ProductController::class);
 Route::resource('pos', TransactionController::class);
 Route::get('get-product/{id}', [TransactionController::class, 'getProduct']);
+Route::get('print/{id}', [TransactionController::class, 'print'])->name('print');
